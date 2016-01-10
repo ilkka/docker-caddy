@@ -2,9 +2,10 @@ FROM alpine:3.3
 MAINTAINER Ilkka Laukkanen <ilkka@ilkka.io>
 
 RUN apk --no-cache add --virtual build-deps curl
+RUN mkdir -p /caddy
 
-RUN mkdir -p /caddy \
-  && curl -L "https://caddyserver.com/download/build?os=linux&arch=386&features=" | tar xzf - -C /caddy
+ENV CADDY_VERSION "0.8.0"
+RUN curl -L "https://github.com/mholt/caddy/releases/download/v${CADDY_VERSION}/caddy_linux_amd64.tar.gz" | tar xzf - -C /caddy
 
 EXPOSE 2015
 
