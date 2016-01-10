@@ -1,6 +1,6 @@
 # Docker base image for Caddy
 
-This image can be used to run the [Caddy HTTP/w web server](https://caddyserver.com) in a container. Just put a Dockerfile next to your Caddyfile with
+This image can be used to run the [Caddy HTTP/2 web server](https://caddyserver.com) in a container. Just put a Dockerfile next to your Caddyfile with
 
 ```
 FROM ilkka/caddy:0.8
